@@ -140,8 +140,15 @@ const Listing = () => {
           setProperties(propertyData);
           setTotalPages(fetchedData.totalPages || 1);
         } else {
+
+          const fetchedData = await Service.fetchProperty(currentPage);
+          propertyData = fetchedData || []; // Ensure it's an array
+          setProperties(propertyData);
+          setTotalPages(fetchedData.totalPages || 1);
+
           propertyData = await Service.fetchProperty();
           setProperties(propertyData || []);
+
         }
 
         // Filter by locality if selected
