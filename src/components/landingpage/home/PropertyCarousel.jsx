@@ -13,17 +13,26 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export const PropertyCarousel = () => {
   // Custom arrow components
-  const CustomPrevArrow = (props) => (
-    <div {...props} className="custom-arrow custom-prev-arrow">
+  const CustomPrevArrow = ({ className, style, onClick }) => (
+    <div
+      className={`${className} custom-arrow custom-prev-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
       <FaChevronLeft size={30} />
     </div>
   );
-
-  const CustomNextArrow = (props) => (
-    <div {...props} className="custom-arrow custom-next-arrow">
+  
+  const CustomNextArrow = ({ className, style, onClick }) => (
+    <div
+      className={`${className} custom-arrow custom-next-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
       <FaChevronRight size={30} />
     </div>
   );
+  
 
   const settings = {
     dots: true,
