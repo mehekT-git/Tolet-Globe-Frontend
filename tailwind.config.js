@@ -3,10 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      'sm': '0px',
-      'md': '360px',
-      'lg': '500px',
-      'xl': '820px',
+      'sm': '640px',  // Small screens (phones)
+      'md': '768px',  // Medium screens (tablets)
+      'lg': '1024px', // Large screens (laptops)
+      'xl': '1280px', // Extra-large screens (desktops)
     },
     extend: {
       transitionProperty: {
